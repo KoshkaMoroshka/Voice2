@@ -3,7 +3,7 @@ import time
 from os import mkdir
 from pathlib import Path
 
-from flask import Flask, request
+from flask import Flask, request, make_response
 
 import numpy
 import speech_recognition
@@ -60,7 +60,6 @@ def addWordToTrain():
 
         file = open(os.getcwd() + "\\testing_set_addition.txt", 'a')
         file.write(str(OUTPUT_FILENAME) + '\n')
-
 
 
 def calculate_delta(array):
@@ -170,6 +169,21 @@ def test_model():
         else:
             return ""
     return "lol you crazy"
+
+
+@app.route('/voiceAPI/api/v1.0/login', methods=['POST'])
+def login():
+    login = request.headers['Login']
+    password = request.headers['Password']
+    return make_response("Success", 200)
+
+
+@app.route('/voiceAPI/api/v1.0/registration', methods=['POST'])
+def registration():
+    login = request.headers['Login']
+    password = request.headers['Password']
+    email = request.headers['email']
+    return make_response("Success", 200)
 
 
 if __name__ == '__main__':
