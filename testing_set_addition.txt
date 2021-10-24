@@ -1,0 +1,12 @@
+roma_sample1.wav
+roma_sample2.wav
+roma_sample3.wav
+roma_sample4.wav
+roma_sample5.wav
+roma_sample6.wav
+eugene_sample1.wav
+eugene_sample2.wav
+eugene_sample3.wav
+eugene_sample4.wav
+eugene_sample5.wav
+eugene_sample6.wav
